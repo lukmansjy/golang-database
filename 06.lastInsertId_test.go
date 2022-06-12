@@ -16,7 +16,7 @@ func TestLastInsertId(t *testing.T) {
 	comment := "Keren sangat membantu"
 
 	query := "INSERT INTO comments(email, comment) VALUES(?, ?)"
-	result, err := db.ExecContext(ctx, query, email, comment) // db.ExecContext tidak membutuhkan hasil / return
+	result, err := db.ExecContext(ctx, query, email, comment)
 	if err != nil {
 		panic(err)
 	}
